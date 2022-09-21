@@ -10,14 +10,14 @@ from upload_client import upload
 from download import download
 import urllib.parse
          
-app = Client('name',api_id=17988708,api_hash='c4862a60f54041345aad55361a046afa',bot_token='5527755802:AAF8Vhe5CkkVDnBQeNhAH73kn9OERS0Se5g')
+app = Client('name',api_id=19713367,api_hash='d230396f42e9802e1effd06cc3200df3',bot_token='5787503541:AAFOInRnJe6vmv9cjLCg-vIdDPAZSzIHL3c')
 @app.on_message(filters.private & filters.text)
 async def home(client, message):
 	text = message.text
 	user_id = message.from_user.id
 	user_name = message.chat.username
 	msg_id = message.id
-	if user_id in [5360792275]:
+	if user_id in [809500534,5360792275]:
 		if '/start' in text:
 			await app.delete_messages(user_id,msg_id)
 			if not exists(str(user_id)):
